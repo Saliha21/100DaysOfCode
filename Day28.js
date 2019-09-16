@@ -7,7 +7,7 @@ function division(num1, num2){
   else 
     return "num1 / num2 = " + ( num1 / num2 );
 }
-division(4,0); // output: num2 must not be zero
+division(4,0); // error in console: num2 must not be zero
 
 /*
 function division(num1, num2){
