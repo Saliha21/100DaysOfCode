@@ -2,7 +2,8 @@
 //Saliha Almalki
 
 function division(num1, num2){
-  if(num2==0) throw "num2 must not be zero"; // throw statement allows you to create a error messages.
+  if(num2==0) throw "num2 must not be zero"; 
+  // throw statement allows you to create a error messages.
   else 
     return "num1 / num2 = " + ( num1 / num2 );
 }
