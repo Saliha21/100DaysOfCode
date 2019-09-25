@@ -3,6 +3,7 @@
 function person(FirstName, LastName, id){ 
   this.FirstName = FirstName; 
   this.LastName = LastName;
+  this.id = id;
 }
 function employee(FirstName, LastName, jobType, company){ 
   person.call(this, FirstName, LastName);
