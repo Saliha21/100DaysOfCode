@@ -3,4 +3,4 @@
 
 var animals = ["Cats","dogs","cows"];
 var animals_length = animals.length;
-document.write(animals_length);u
+document.write(animals_length);
