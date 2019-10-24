@@ -1,4 +1,4 @@
-// 59 - 100 * Array methods *
+// 59 - 100 * Strings As Arrays *
 var str = "HELLO WORLD";
 var res = str.charAt(0); // 
 var resEnd = str.charAt(str.length-1);// 
