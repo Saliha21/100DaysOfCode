@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opening and closing windows</title>
+	<style>
+ 		body {margin-top: 100px; text-align: center; background:  #e6f0ff;}
+ 		button{border-radius: 5px;width:150px;height: 50px;border-style: none;background-color: lightgrey; }
+	</style>
+<script>
+var myWindow;
+function openWin() {
+ myWindow = window.open("", "myWindow", "width=400, height=200");
+ myWindow.document.write('Hi! in my window' + '<br>');
+ myWindow.document.write('<img src ="../image/a.jpg" width="200"/>');
+}
+function closeWin() {
+ if (myWindow) {
+ myWindow.close();
+ }
+}
+function checkWin() {
+ if (!myWindow) {
+ document.getElementById("msg").innerHTML = "'myWindow' has never been opened!";
+ } else {
+ if (myWindow.closed) {
+ document.getElementById("msg").innerHTML = "'myWindow' has been closed!";
+ } else {
+ document.getElementById("msg").innerHTML = "'myWindow' has not been closed!";
+}}}
+</script>
+</head>
+<body>
+<button onclick="openWin()">Open Window</button>
+<button onclick="closeWin()">Close Window"</button>
+<br><br>
+<button onclick="checkWin()">Has "myWindow" been closed?</button>
+<br><br>
+<div id="msg"></div>
+</body>
+</html>

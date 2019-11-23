@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dialog Boxes</title>
+	<style>
+		body{margin: 200px; background: #ffe6e6; text-align: center;}
+		p {font-style: italic; display: inline; font-weight: bold;}
+		a { text-decoration: none; }
+	</style>
+</head>
+<body> <!-- Day 74 and 75 -->
+	<p>open it in a new tab or in new window :</p><br><br>
+	<a id ="open" href="https://www.saudidev.org" onclick="openn()"> saudidevorg </a><br><br>
+	<script>
+		function openn(){
+			var choose;
+			if (confirm("Are you want to open the page in new tab? if yes click ok \n if no click cancel")) {
+			  document.getElementById("open").target = "_blank";
+			} else {
+			  document.getElementById("open").target = "_self";
+			}
+		}
+	</script>
+</body>
+</html>
