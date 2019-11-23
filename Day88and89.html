@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html> 
+   <head>
+      <title> mousedown and mouseup Events </title>
+   <style> body{margin: 300px ; background: #ffe6e6; font-size: 50px; } </style> 
+      <script> 
+         document.addEventListener("mousedown", function down() { 
+               document.getElementById('demo').style.color = "yellow"; 
+            } );  
+            document.addEventListener("mouseup", function down() { 
+               document.getElementById('demo').style.color = "green"; 
+            } );          
+      </script> 
+   </head> 
+   <body> 
+      <p id="demo">Click here</p>
+   </body> 
+</html> 

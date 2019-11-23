@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+      <title> Touchscreen and Mobile Events </title>
+   <style> 
+     body{margin: 100px ; background: #ffe6e6;} 
+     #demo{color:red; font-size: 60px;}
+  </style> 
+  <script>
+	document.getElementById("myP").addEventListener("touchend", myFunction); 
+	function myFunction() { 
+	  document.getElementById("demo").innerHTML = "Good Morning"; 
+	} 
+  </script>
+</head>
+<body> 
+<h1>DOM touchend Event</h1>
+<p id="myP">Touch this paragraph, and release the touch to trigger a function that will write "Hello World".</p> 
+<p id="demo"></p> 
+</body> 
+</html>

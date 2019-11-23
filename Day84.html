@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html> 
+   <head>
+      <title> Onmouseover and Onmouseout Events </title>
+   <style> body{margin: 300px ; background: #ffe6e6; } </style> 
+      <script> 
+            function over() { 
+               document.getElementById('demo').style.color = "red"; 
+            } 
+            function out() { 
+               document.getElementById('demo').style.color = "blue"; 
+            }             
+      </script> 
+   </head> 
+   <body> 
+      <h1 id="demo" onmouseover = "over()" onmouseout = "out()">Bring your mouse here to see the result.</h1>
+   </body> 
+</html> 
