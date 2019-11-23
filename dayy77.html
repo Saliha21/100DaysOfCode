@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> cloneNode() Method </title>
+	<style>
+		body{margin: 150px; background: #ffe6e6;}
+	</style>
+</head>
+<body>
+<div>
+		<ul><li>Coffee</li><li>Tea</li></ul>
+		<ul><li>Water</li><li>Milk</li></ul>
+</div>
+<p>Click the button to copy an item from one list to another.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var itm = document.getElementsByTagName("DIV")[0];
+  var cln = itm.cloneNode(true);
+  document.body.appendChild(cln);
+}
+</script> 
+
+</body>
+</html>

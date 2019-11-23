@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scroll Property</title>
+	<style>
+		body{margin-top:20px; margin-left: 50px; background: #ffe6e6; }
+		#myDIV {
+		height: 250px;
+		width: 250px;
+		overflow: auto;
+		}
+		#content {
+		height: 800px;
+		width: 2000px;
+		background-color: coral;
+		}
+	</style>
+</head>
+<body>
+<p>Scroll inside the div element to display the number of pixels the content of div is scrolled horizontally and vertically.</p>
+<div id="myDIV" onscroll="myFunction()">
+<div id="content">Scroll inside me!</div>
+</div>
+<p id="demo"></p>
+<div style="height:200px; width:300px; overflow:auto;">
+<div id="myDiv" style="width:250px; height:150px; border:1px solid red;">
+Return the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+</div>
+<div style="width:1000px; height:1000px;"></div>
+</div>
+<br>
+<button onclick="myFunction1()">Get top-left corner + witdth and height of the element with red border</button>
+<script>
+function myFunction() {
+var elmnt = document.getElementById("myDIV");
+var x = elmnt.scrollLeft;
+var y = elmnt.scrollTop;
+document.getElementById ("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y + "px";
+}
+</script>
+<script>
+function myFunction1() {
+var div = document.getElementById("myDiv");
+var rect = div.getBoundingClientRect();
+x = rect.left;
+y = rect.top;
+w = rect.width;
+h = rect.height;
+alert ("Left: " + x + ", Top: " + y + ", Width: " + w + ", Height: " + h);
+}
+</script>
+</body>
+</html>

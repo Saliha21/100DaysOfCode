@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Inserting Nodes </title>
+ <style>
+		body{margin: 150px; background: #ffe6e6;}
+ </style>
+</head>
+<body>
+<ul id="myList">
+ <li>Apple</li>
+ <li>Banana</li>
+</ul>
+<p>Click the button to insert an item to the list.</p>
+<button onclick="myFunction()">Try it</button>
+<hr>
+<ul id="myList1"><li>Orange</li><li>Cheery</li></ul>
+<ul id="myList2"><li>Apple</li><li>Banana</li></ul>
+<p>Click the button to move an item from one list to another</p>
+<button onclick="myFunction1()">Try it</button>
+<script>
+function myFunction() {
+ var newItem = document.createElement("LI");
+ var textnode = document.createTextNode("Orange");
+ newItem.appendChild(textnode);
+ var list = document.getElementById("myList");
+ list.insertBefore(newItem, list.childNodes[0]);
+}
+</script>
+<script>
+function myFunction1() {
+ var node = document.getElementById("myList2").lastChild;
+ var list = document.getElementById("myList1");
+ list.insertBefore(node, list.childNodes[0]);
+}
+</script>
+</body>
+</html>

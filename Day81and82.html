@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>elementFromPoint</title>
+	<style> body{margin: 150px; background: #ffe6e6; }</style>
+<body>
+<p id="prag1" onmouseover ="OnMouseMove('red');" onmouseout="OnMouseMove('black');"> elementFromPoint </p>
+<button onclick="changeSize('25px');"> 25px </button>
+<button onclick="changeSize('20px');"> 20px </button>
+<!-- -->
+<script>
+	function changeSize(newSize) {
+	  elem = document.elementFromPoint(2,2);
+	  elem.style.fontSize = newSize;
+}
+	function OnMouseMove(event) {
+	  elm = document.elementFromPoint(2,2);
+	  elm.style.color = event;
+	   }
+</script>
+</body>
+</html>

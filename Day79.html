@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Removing and Replacing Nodes </title>
+ <style>
+		body{margin: 150px; background: #ffe6e6; }
+		#DIV{height: 90px; width: 100%; border: 2px solid black; margin-bottom: 10px; padding: 10px;}
+ </style>
+</head>
+<body>
+<div id="DIV">
+ <p>this text will remove by removeChild() method </p>
+ <p>The removeChild() method removes a specified child node of the specified element. </p>
+</div>
+<button onclick="myFunction1()">Try it</button>
+<script>
+function myFunction() {
+ var list = document.getElementById("DIV");
+ list.removeChild(list.childNodes[0]);
+}
+</script>
+
+<script>
+function myFunction1(){
+ var list = document.getElementById("DIV");
+ while (list.hasChildNodes()) {
+ list.removeChild(list.firstChild);
+ }
+}
+</script>
+</body>
+</html>

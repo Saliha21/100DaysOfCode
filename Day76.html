@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>The Document Object Model</title></head>
+	<style>
+		body{margin: 150px; background: #ffe6e6;}
+		input {display: block;}
+		label { display: block; padding: 10px ;}
+	</style>
+<body>
+	<h1>The Document Object Model</h1>
+<label>First Name:</label> <input name="fname" type="text" value="Seren">
+<label>Last Name:</label> <input name="fname" type="text" value="Mohammed">
+<p>Click the button to get the value of the first element in the document that has a name
+attribute with the value "fname".</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<br><hr>
+
+<script>
+function myFunction(){
+ var x = document.getElementsByName("fname")[0].value;
+ document.getElementById("demo").style.color = "blue";
+ document.getElementById("demo").style.fontSize = "150%";
+ document.getElementById("demo").innerHTML = x
+}
+</script>
+</body>
+</html>
