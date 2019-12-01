@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html>
+<head><title>The Navigator Object</title>
+</head> 
+<body>
+<h2>The Navigator Object</h2> 
+<p id="demo"></p> 
+<script> 
+	var Navig = "";
+		Navig += "<p>Browser Version: " + navigator.appVersion + "</p>";
+		Navig += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+		Navig += "<p>Browser Language: " + navigator.language + "</p>";
+		Navig += "<p>Browser Online: " + navigator.onLine + "</p>";
+
+
+document.getElementById("demo").innerHTML = Navig; 
+</script> 
+ 
+</body> 
+</html>
