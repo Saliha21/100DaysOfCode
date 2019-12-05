@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sessionStorage & localStorage</title>
+	<style>
+		body{ margin: 90px}
+		input{display: block; margin: 10px;}
+	</style>
+<script>
+	function localStorage1() {
+		var firstName = document.getElementById("Fname");
+		localStorage.setItem("FirstName", firstName.value);
+	}
+	function localStorage2() {
+		document.write(localStorage.getItem("FirstName"));
+	}
+
+	function sessionStorage1() {
+		var firstName2 = document.getElementById("Fname1");
+		sessionStorage.setItem("FirstName", firstName2.value);
+	}
+	function sessionStorage2() {
+		document.write(sessionStorage.getItem("FirstName"));
+	}
+</script>
+</head>
+<body>
+	<div>
+		<h1>Try localStorage</h1>
+		<label>First name:</label>
+		<input id="Fname" type="text">			
+		<input type="submit" name="submit" value="Save" onclick = "localStorage1()">
+		<button onclick = "localStorage2()">getItem</button> 
+	</div>
+	<div>
+		<h1>Try sessionStorage</h1>
+		<label>First name:</label>
+		<input id="Fname1" type="text">			
+		<input type="submit" name="submit" value="Save" onclick = "sessionStorage1()">
+		<button onclick = "sessionStorage2()">getItem</button> 
+	</div>
+</body>
+</html>
